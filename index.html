@@ -547,13 +547,6 @@
           <i class="fa-solid fa-lock"></i>
         </div>
         <h3 class="font-bold text-xl text-slate-800 mb-1">Đăng nhập HR</h3>
-        <p class="text-sm text-slate-500 mb-6">
-          Mật khẩu Demo:
-          <code
-            class="bg-slate-100 px-1 py-0.5 rounded text-brand-600 font-bold"
-            >admin123</code
-          >
-        </p>
 
         <form onsubmit="handleLogin(event)" class="space-y-4">
           <input
@@ -1205,7 +1198,7 @@
       function handleLogin(e) {
         e.preventDefault();
         const pw = document.getElementById("loginPassword").value;
-        if (pw === "admin123") {
+        if (pw === "01685034807Tai@") {
           isAdmin = true;
           document.getElementById("navLoginBtn").classList.add("hidden");
           document.getElementById("navAdminBtn").classList.remove("hidden");
@@ -1213,21 +1206,8 @@
           closeAllModals();
           showSection("admin");
           showToast("Đăng nhập HR thành công");
-
-          if (applications.length === 0) {
-            applications.push({
-              id: Date.now() - 10000,
-              jobId: 1,
-              jobTitle: "Nhân viên Kho chính thức (Dự án SPX)",
-              name: "Trần Văn Bằng",
-              phone: "0912345678",
-              note: "Em muốn làm ca đêm tại Q12, có sức khỏe tốt từng bốc vác.",
-              time: new Date().toLocaleString("vi-VN"),
-            });
-            renderApplications();
-          }
         } else {
-          alert('Sai mật khẩu. Hãy nhập "admin123"');
+          alert("Sai mật khẩu. Vui lòng kiểm tra lại!");
         }
       }
 
